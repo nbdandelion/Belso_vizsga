@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+
+/*1.*/
+function kivalogatParosOtven(szamok){
+  return szamok.filter(szam => szam % 2 == 0 && szam > 50);
+}
+
+const eredmeny = kivalogatParosOtven([10, 20, 3, 5, 100, 50, 60, 53]);
+console.log(eredmeny); 
+
+
+/*2.*/
+function aBetukSzamaDiv() {
+  const feladat = document.querySelector('body > div:first-child').textContent;
+  const aSzamolo = (feladat.match(/a/g) || []).length;
+  return aSzamolo;
+}
+
+
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div></div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
